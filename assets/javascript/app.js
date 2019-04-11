@@ -3,7 +3,7 @@ var searchFood;
 // Might want to use this wiht typeOf var stringValue = "";
 
 
-    $("#run-search").on("click", function(event) {
+    $("#runSearch").on("click", function(event) {
 
         /*This line 13 allows us to take advantage of the HTML "submit" property
         This way we can hit enter on the keyboard and it registers the search
@@ -13,7 +13,7 @@ var searchFood;
         event.preventDefault();
 
 
-        searchFood = $('#meal_text').val().trim();
+        searchFood = $('#mealText').val().trim();
 
         console.log(searchFood);
 
