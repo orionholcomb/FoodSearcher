@@ -18,7 +18,7 @@
     <h1>Find a Food</h1>
 
     <!-- Form where user searches for their food -->
-    <form id="foodSearch" action="action_page.php">
+    <form autocomplete='off' id="foodSearch" action="action_page.php">
       <input type="text" placeholder="Enter Dish" name="search" id="mealText" />
       <button type="submit" id="runSearch">
         Search <i class="fa fa-search"></i>
@@ -51,15 +51,28 @@
     </div>
 
     <!-- Input form to gather weight, age, and sex for the calorie formula -->
-    <form>
+    <form id='weightAgeSex' autocomplete='off'>
       <input type='text' placeholder="Weight" id='userWeight'>
       <input type='text' placeholder="Age" id='userAge'>
       <select id='userSex'>
         <option value='Male'>Male</option>
         <option value='Female'>Female</option>
       </select>
-      <button type='submit' id='FBSubmit'>Calculate</button>
+      <button type='submit' id='firebaseSubmit'>Calculate</button>
     </form>
+
+    <!-- Div that will hold the activities required to lose target calories -->
+    <div id='gamePlan'></div>
+
+    <div id='gymFinder'>
+    <!-- Takes user's zipcode input -->
+    <form id='zipcode' autocomplete="off">
+      <input type='text' placeholder='Enter Zipcode' id='userZip'>
+      <button type='submit' id='gymFind'>Find a Gym!</button>
+    </form>
+    <!-- @Gabriel Div that holds maps API -->
+    <div id='mapSpot'></div>
+    </div>
 
     <!-- Script Links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
