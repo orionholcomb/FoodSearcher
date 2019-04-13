@@ -16,6 +16,7 @@
 
   <body>
     <h1>Find a Food</h1>
+    <p>Type in a food item below and enter the requested information for a plan on how to lose those calories!</p>
 
     <!-- Form where user searches for their food -->
     <form autocomplete='off' id="foodSearch" action="action_page.php">
@@ -31,12 +32,7 @@
       
     </div>
 
-    <!-- Buttons that allow the user to decide what activity to do (may have to add these through JS) -->
-    <div id="exerciseOptions">
-      <button id="jogging">Jogging</button>
-      <button id="swimming">Swimming</button>
-      <button id="biking">Biking</button>
-    </div>
+   
 
     <!-- Div that will hold all of the nutritional facts of the selected food item -->
     <div id="nutritionFacts">
@@ -50,7 +46,7 @@
       
     </div>
 
-    <!-- Input form to gather weight, age, and sex for the calorie formula -->
+    <!-- Input form to gather weight, age, and sex for the calorie formula. User then chooses how they want to burn the calories -->
     <form id='weightAgeSex' autocomplete='off'>
       <input type='text' placeholder="Weight" id='userWeight'>
       <input type='text' placeholder="Age" id='userAge'>
@@ -58,9 +54,11 @@
         <option value='Male'>Male</option>
         <option value='Female'>Female</option>
       </select>
-      <button type='submit' id='firebaseSubmit'>Calculate</button>
+      <button id="jogging">Jogging</button>
+      <button id="swimming">Swimming</button>
+      <button id="biking">Biking</button>
     </form>
-
+ 
     <!-- Div that will hold the activities required to lose target calories -->
     <div id='gamePlan'></div>
 
