@@ -1,4 +1,3 @@
-
 //var maleWeight = $("userWeight").val().trim();
 
 
@@ -28,4 +27,3 @@ function timeCalc() {
 
 
 //console.log(caloriesBurned);
-
