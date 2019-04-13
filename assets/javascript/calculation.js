@@ -1,6 +1,4 @@
-var maleWeight = $("#userWeight")
-  .val()
-  .trim();
+//var maleWeight = $("userWeight").val().trim();
 
 /* The following equivalencies were gathered from web research and are approximations; MET = metabolic equivalent:
 - jogging @ 4mph (MET) = 6
