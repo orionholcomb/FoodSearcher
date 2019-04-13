@@ -44,5 +44,5 @@ $("#runSearch").on("click", function(event) {
   });
 });
 
-displayResults();
+//displayResults();
 
