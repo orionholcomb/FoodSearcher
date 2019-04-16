@@ -72,9 +72,14 @@ function timeCalc() {
  
   var returnCalc = ((nfCal) / ((met * parseInt(weight)) / 2.2))*100;
 
-  $("#gamePlan").text(Math.round(returnCalc) + " minutes");
+  $("#gamePlan").text("You need to " + exerciseCalc + " for " + Math.round(returnCalc) + " minutes!");
 
+
+  $("#zipcode").prepend("Enter your zip code, and let's workout!");
+  
 }
+
+
 
     
 
