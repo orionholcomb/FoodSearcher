@@ -79,34 +79,3 @@ function timeCalc() {
   })
 });
 
-//displayResults();
-
-// $(".exerBtn").on("click", timeCalc);
-
-// function timeCalc() {
-//   var exerciseCalc = $(this).attr("data-name");
-
-//   if (exerciseCalc === "jog") {
-//     var met = 6;
-//   } else if (exerciseCalc === "swim") {
-//     var met = 6;
-//   } else if (exerciseCalc === "bike") {
-//     var met = 8;
-//   }
-
-//   console.log(this);
-//   console.log(exerciseCalc);
-
-//   var caloriesBurned = $("#searchResults")
-//     .val()
-//     .trim();
-
-//   var returnCalc =
-//     (parseInt(caloriesBurned) / ((met * parseInt(maleWeight)) / 2.2));
-
-//   $("#gamePlan").text(returnCalc);
-
-//   console.log(caloriesBurned);
-//   console.log(maleWeight);
-//   console.log(met);
-// }
