@@ -81,12 +81,12 @@ $("#runSearch").on("click", function(event) {
           " for " +
           Math.round(returnCalc) +
           " minutes to lose " +
-          nfCal +
-          " !");
+          Math.round(nfCal) +
+          " calories!");
 
 
       //Statement that appears after the user clicks desired exercise activity 
-      $("#zipcode").prepend("Enter your zip code, and let's workout!");
+      $("#zipcode").text("Enter your zip code, and let's workout!");
     }
   });
 });
