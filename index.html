@@ -33,9 +33,9 @@
 
     <!-- Buttons that allow the user to decide what activity to do (may have to add these through JS) -->
     <div id="exerciseOptions">
-      <button class="exerBtn"  id="jogging" data-name="jog">Jogging</button>
-      <button class="exerBtn" id="swimming" data-name="swim">Swimming</button>
-      <button class="exerBtn" id="biking" data-name="bike">Biking</button>
+      <button class="exerBtn"  id="jogging" data-name="jog">Jog</button>
+      <button class="exerBtn" id="swimming" data-name="swim">Swim</button>
+      <button class="exerBtn" id="biking" data-name="bike">Bike</button>
     </div>
 
     <!-- Div that will hold all of the nutritional facts of the selected food item -->
@@ -64,19 +64,23 @@
     <!-- Div that will hold the activities required to lose target calories -->
     <div id="gamePlan"></div>
 
-    <div id="gymFinder">
-      <!-- Takes user's zipcode input -->
-      <form id="zipcode" autocomplete="off">
-        <input type="text" placeholder="Enter Zipcode" id="userZip" />
-        <button type="submit" id="gymFind">Find a Gym!</button>
-      </form>
-      <!-- @Gabriel Div that holds maps API -->
-      <div id="mapSpot"></div>
+    <div id='gymFinder'>
+    <!-- Takes user's zipcode input -->
+    <form id='zipcode' autocomplete="off">
+      <input type='text' placeholder='Enter Zipcode' id='userZip'/>
+      <button type='submit' id='gymFind'>Find a Gym!</button>
+    </form>
+    <!-- @Gabriel Div that holds maps API -->
+    <div id='mapSpot'></div>
     </div>
 
     <!-- Script Links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLMuYfFilr8RmhGeZEExjIb4HIZAlXd54&callback=initMap"
+    async defer></script>
+    <script src="./assets/javascript/googlemap.js"></script>
     <script src="./assets/javascript/search.js"></script>
-    <!-- <script src="./assets/javascript/calculation.js"></script> -->
   </body>
 </html>

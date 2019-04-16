@@ -1,10 +1,9 @@
 var searchFood;
-//console.log("ttt");
-// Might want to use this wiht typeOf var stringValue = "";
 
-
+//displayResults function takes the data response from the ajax call and displays them to the browser page
 var displayResults = function(data) {
     
+
     $('#servId').text(data.hits[0].fields.item_name);
     $("#calories").text("Calories: " + data.hits[0].fields.nf_calories + " kcal");
     $("#carbs").text("Carbohydrates: " + data.hits[0].fields.nf_total_carbohydrate + " g");
@@ -20,9 +19,9 @@ $("#runSearch").on("click", function(event) {
 
   event.preventDefault();
 
-  searchFood = $("#mealText").val().trim();
+   searchFood = $("#mealText").val().trim();
 
-  console.log(searchFood);
+//   console.log(searchFood);
 
   // The display Results function takes data returned by nutritionix.com and displays to the HTML body
 
@@ -40,17 +39,24 @@ $("#runSearch").on("click", function(event) {
 
     displayResults(response);
 
-    
-    var nfCal = response.hits[0].fields.nf_calories;
+//caloric value requiered for use in the activity time below on line 73    
+var nfCal = response.hits[0].fields.nf_calories;
 
 $(".exerBtn").on("click", timeCalc);
 
+
+/*This line 51 allows us to take advantage of the HTML "submit" property
+        This way we can hit enter on the keyboard and it registers the search
+        (in addition to clicks). Prevents the page from reloading on form submit.*/
+event.preventDefault();
+
+//This 
 function timeCalc() {
   var exerciseCalc = $(this).attr("data-name");
   var weight = $("#userWeight").val().trim();
 
   if (exerciseCalc === "jog") {
-    var met = 6;
+    var met = 7;
   } else if (exerciseCalc === "swim") {
     var met = 6;
   } else if (exerciseCalc === "bike") {
@@ -64,17 +70,21 @@ function timeCalc() {
 
 
  
-  var returnCalc =
-    (nfCal) / ((met * parseInt(weight)) / 2.2);
+  var returnCalc = ((nfCal) / ((met * parseInt(weight)) / 2.2))*100;
 
-  $("#gamePlan").text(returnCalc);
+  $("#gamePlan").text("You need to " + exerciseCalc + " for " + Math.round(returnCalc) + " minutes!");
 
+
+  $("#zipcode").prepend("Enter your zip code, and let's workout!");
+  
 }
+
+
 
     
 
 
-    $("#searchResults").text(response.hits[0].fields.nf_calories);
+   
 
   })
 });
