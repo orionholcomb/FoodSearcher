@@ -20,7 +20,7 @@
 
     <!-- Form where user searches for their food -->
     <form autocomplete="off" id="foodSearch" action="action_page.php">
-      <input type="text" placeholder="Enter Dish" name="search" id="mealText" />
+      <input type="text" placeholder="Enter Dish" name="search" id="mealText" onkeyup="lettersOnly(this)"/>
       <button type="submit" id="runSearch">
         Search <i class="fa fa-search"></i>
       </button>
@@ -52,7 +52,7 @@
 
     <!-- Input form to gather weight, age, and sex for the calorie formula -->
     <form id="weightAgeSex" autocomplete="off">
-      <input type="text" placeholder="Weight" id="userWeight" />
+      <input type="text" placeholder="Weight" id="userWeight" onkeyup="numbersOnly(this)"/>
       <input type="text" placeholder="Age" id="userAge" />
       <select id="userSex">
         <option id="maleOption" value="Male">Male</option>
@@ -67,7 +67,7 @@
     <div id='gymFinder'>
     <!-- Takes user's zipcode input -->
     <form id='zipcode' autocomplete="off">
-      <input type='text' placeholder='Enter Zipcode' id='userZip'/>
+      <input type='text' placeholder='Enter Zipcode' id='userZip' onkeyup="numbersOnly(this)"/>
       <button type='submit' id='gymFind'>Find a Gym!</button>
     </form>
     <!-- @Gabriel Div that holds maps API -->
@@ -82,5 +82,6 @@
     async defer></script>
     <script src="./assets/javascript/googlemap.js"></script>
     <script src="./assets/javascript/search.js"></script>
+    <script src="./assets/javascript/restricted_login.js"></script>
   </body>
 </html>
