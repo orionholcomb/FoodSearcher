@@ -16,4 +16,3 @@ function numbersOnly(input) {
   input.value = input.value.replace(regex, "");
 }
 numbersOnly();
-
