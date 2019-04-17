@@ -16,7 +16,10 @@
 
   <body>
     <h1>Find a Food</h1>
-    <p>Type in a food item below and enter the requested information for a plan on how to lose those calories!</p>
+    <p>
+      Type in a food item below and enter the requested information for a plan
+      on how to lose those calories!
+    </p>
 
     <!-- Form where user searches for their food -->
     <form autocomplete="off" id="foodSearch" action="action_page.php">
@@ -47,8 +50,7 @@
       <h2 id="carbs"></h2>
       <h2 id="protein"></h2>
       <h2 id="sodium"></h2>
-      
-    </div>
+      </div>
 
     <!-- Input form to gather weight, age, and sex for the calorie formula -->
     <form id="weightAgeSex" autocomplete="off">
@@ -79,13 +81,15 @@
     </div>
 
     <!-- Script Links -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="./assets/javascript/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLMuYfFilr8RmhGeZEExjIb4HIZAlXd54&callback=initMap"
     async defer></script>
-    <script src="./assets/javascript/googlemap.js"></script>
+    <script src="./assets/javascript/firebase.js"></script>
     <script src="./assets/javascript/search.js"></script>
     <script src="./assets/javascript/restricted_login.js"></script>
+    <script src="./assets/javascript/googlemap.js"></script>
   </body>
 </html>
