@@ -54,12 +54,8 @@
 
     <!-- Input form to gather weight, age, and sex for the calorie formula -->
     <form id="weightAgeSex" autocomplete="off">
-      <input type="text" placeholder="Weight" id="userWeight" onkeyup="numbersOnly(this)"/>
-      <input type="text" placeholder="Age" id="userAge" />
-      <select id="userSex">
-        <option id="maleOption" value="Male">Male</option>
-        <option id="femaleOption" value="Female">Female</option>
-      </select>
+      <input type="text" placeholder="Name" id="userName" onkeyup="lettersOnly(this)" />
+      <input type="text" placeholder="Weight" id="userWeight" onkeyup="numbersOnly(this)" />
       <button type="submit" id="firebaseSubmit">Calculate</button>
     </form>
 
