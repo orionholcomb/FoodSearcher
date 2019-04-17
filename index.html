@@ -16,10 +16,13 @@
 
   <body>
     <h1>Find a Food</h1>
-    <p>Type in a food item below and enter the requested information for a plan on how to lose those calories!</p>
+    <p>
+      Type in a food item below and enter the requested information for a plan
+      on how to lose those calories!
+    </p>
 
     <!-- Form where user searches for their food -->
-    <form autocomplete='off' id="foodSearch" action="action_page.php">
+    <form autocomplete="off" id="foodSearch" action="action_page.php">
       <input type="text" placeholder="Enter Dish" name="search" id="mealText" />
       <button type="submit" id="runSearch">
         Search <i class="fa fa-search"></i>
@@ -29,46 +32,42 @@
     <!-- Div that will hold all of the nutritional facts of the selected food item -->
     <div id="nutritionFacts">
       <!-- @King Use inner HTML to add image source -->
-      <img id='foodImg'>
-      <h2 id='calories'></h2>
-      <h2 id='carbs'></h2>
-      <h2 id='protein'></h2>
-      <h2 id='sodium'></h2>
-      <h2 id='servSize'></h2>
-      
+      <img id="foodImg" />
+      <h2 id="calories"></h2>
+      <h2 id="carbs"></h2>
+      <h2 id="protein"></h2>
+      <h2 id="sodium"></h2>
+      <h2 id="servSize"></h2>
     </div>
 
     <!-- Input form to gather weight, age, and sex for the calorie formula. User then chooses how they want to burn the calories -->
-    <form id='weightAgeSex' autocomplete='off'>
-      <input type='text' placeholder="Weight" id='userWeight'>
-      <input type='text' placeholder="Age" id='userAge'>
-      <select id='userSex'>
-        <option value='Male'>Male</option>
-        <option value='Female'>Female</option>
-      </select>
-      <button class="activities" id="jogging">Jogging</button>
-      <button class="activities" id="swimming">Swimming</button>
-      <button class="activities" id="biking">Biking</button>
+    <form id="weightAgeSex" autocomplete="off">
+      <input type="text" placeholder="Name" id="userName" />
+      <input type="text" placeholder="Weight" id="userWeight" />
+      <button class="exerBtn" type="button" id="jogging">Jogging</button>
+      <button class="exerBtn" type="button" id="swimming">Swimming</button>
+      <button class="exerBtn" type="button" id="biking">Biking</button>
     </form>
- 
-    <!-- Div that will hold the activities required to lose target calories -->
-    <div id='gamePlan'></div>
 
-    <div id='gymFinder'>
-    <!-- Takes user's zipcode input -->
-    <form id='zipcode' autocomplete="off">
-      <input type='text' placeholder='Enter Zipcode' id='userZip'>
-      <button type='submit' id='gymFind'>Find a Gym!</button>
-    </form>
-    <!-- @Gabriel Div that holds maps API -->
-    <div id='mapSpot'></div>
+    <!-- Div that will hold the exerBtn required to lose target calories -->
+    <div id="gamePlan"></div>
+
+    <div id="gymFinder">
+      <!-- Takes user's zipcode input -->
+      <form id="zipcode" autocomplete="off">
+        <input type="text" placeholder="Enter Zipcode" id="userZip" />
+        <button type="submit" id="gymFind">Find a Gym!</button>
+      </form>
+      <!-- @Gabriel Div that holds maps API -->
+      <div id="mapSpot"></div>
     </div>
 
     <!-- Script Links -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./assets/javascript/firebase.js"></script>
     <script src="./assets/javascript/search.js"></script>
-    <script src="./assets/javascript/calculation.js"></script>
   </body>
 </html>
