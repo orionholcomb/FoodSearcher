@@ -159,15 +159,13 @@
 
           </div>
           <!-- SECTION Google Map and ZIP CODE-->
-          <div  id="gymFinder"  class="col s12 m4">
+          <div id="gymFinder"  class="col s12 m4">
               <div class="card">
-                  <div id="mapSpot" class="card-image map-img">
-                  </div>
                   <div class="card-content">
                       <h3> <span class="card-title"><u>Let's Get Healthy</u></span></h3>
-                      <p style="font-size:20px">Plese enter your zip code for a map of work-out places in your area. </p>
+                      <p style="font-size:20px">Please enter your zip code for a map of work-out places in your area. </p>
                       <div class="input-field">
-                          <input onkeyup="numbersOnly(this)" type="text" id="userzip" />
+                          <input onkeyup="numbersOnly(this)" type="text" id="userZip" />
                           <label for="userZip">Zip Code </label>
                         </div>
 
@@ -176,10 +174,6 @@
                     <a href="#mapmodal" class=" btn waves-effect waves-light modal-trigger">Find A Gym</a>
                   </div>
                 </div>
-              
-              <!-- <div class="card-img">            
-              <img src="assets/img/googlemap.jpg" alt="" class=" responsive-img">
-            </div>             -->
             </div>
             
           </div>
@@ -187,6 +181,17 @@
       </div>
 <!-- SECTION: Buttons For Excercises-->
 
+    <!-- Div that will hold the activities required to lose target calories -->
+    <div id="gamePlan"></div>
+
+    <!-- Displays instructions for the user zip code search -->
+    <div id="findInstr"></div>
+
+    <!-- Takes user's zipcode input -->
+    <div id='gymFinder'>
+
+    <ol id='gymList'></ol>
+    </div>
       <div class="row">
         <div class="col s12" >
            <button class="exerBtn btn" id ="swimming" data-name="swim"> <a href="#swim-modal" class="modal-trigger white-text " ><i class="fas fa-swimmer"></i> Swimming</a></button>
