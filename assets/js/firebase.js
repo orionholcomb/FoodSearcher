@@ -17,16 +17,23 @@ $(".exerBtn").on("click", function(event) {
   event.preventDefault();
 
   // Variables that store user inputs
-  var username = $("#userName")
+  var name = $("#name")
     .val()
     .trim();
-  var weight = $("#userWeight")
+  var email = $("#email")
     .val()
     .trim();
-
+  var phone = $("#phone")
+    .val()
+    .trim();
+  var message = $("#message")
+    .val()
+    .trim();
   database.ref().set({
-    nameInput: username,
-    weightInput: weight
+    nameInput: name,
+    emailInput: email,
+    phoneInput: phone,
+    messageInput: message
   });
 });
 
