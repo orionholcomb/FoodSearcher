@@ -15,12 +15,17 @@
   </head>
 
   <body>
+
     <h1>Find a Food</h1>
-    <p>Type in a food item below and enter the requested information for a plan on how to lose those calories!</p>
+    <p>
+      Type in a food item below and enter the requested information for a plan
+      on how to lose those calories!
+    </p>
 
     <!-- Form where user searches for their food -->
     <form autocomplete="off" id="foodSearch" action="action_page.php">
-      <input type="text" placeholder="Enter Dish" name="search" id="mealText" onkeyup="lettersOnly(this)"/>
+      <!-- <input type="text" placeholder="Enter Dish" name="search" id="mealText" onkeyup="lettersOnly(this)"/> -->
+      <input type="text" placeholder="Enter Dish" name="search" id="mealText"/>
       <button type="submit" id="runSearch">
         Search <i class="fa fa-search"></i>
       </button>
@@ -31,34 +36,25 @@
       <!-- Food card goes here -->
     </div>
 
-    <!-- Buttons that allow the user to decide what activity to do (may have to add these through JS) -->
-    <div id="exerciseOptions">
-      <button class="exerBtn"  id="jogging" data-name="jog">Jog</button>
-      <button class="exerBtn" id="swimming" data-name="swim">Swim</button>
-      <button class="exerBtn" id="biking" data-name="bike">Bike</button>
-    </div>
-
     <!-- Div that will hold all of the nutritional facts of the selected food item -->
     <div id="nutritionFacts">
       <!-- @King Use inner HTML to add image source -->
-      <img id="foodImg" />
+      <img id="foodImg"/>
+      
       <h2 id="servId"></h2>
       <h2 id="calories"></h2>
       <h2 id="carbs"></h2>
       <h2 id="protein"></h2>
       <h2 id="sodium"></h2>
-      
-    </div>
+      </div>
 
     <!-- Input form to gather weight, age, and sex for the calorie formula -->
     <form id="weightAgeSex" autocomplete="off">
-      <input type="text" placeholder="Weight" id="userWeight" onkeyup="numbersOnly(this)"/>
-      <input type="text" placeholder="Age" id="userAge" />
-      <select id="userSex">
-        <option id="maleOption" value="Male">Male</option>
-        <option id="femaleOption" value="Female">Female</option>
-      </select>
-      <button type="submit" id="firebaseSubmit">Calculate</button>
+      <input type="text" placeholder="Name" id="userName" onkeyup="lettersOnly(this)" />
+      <input type="text" placeholder="Weight" id="userWeight" onkeyup="numbersOnly(this)" />
+      <button class="exerBtn"  id="jogging" data-name="jog">Jog</button>
+      <button class="exerBtn" id="swimming" data-name="swim">Swim</button>
+      <button class="exerBtn" id="biking" data-name="bike">Bike</button>
     </form>
 
     <!-- Div that will hold the activities required to lose target calories -->
@@ -81,13 +77,15 @@
     </div>
 
     <!-- Script Links -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="./assets/javascript/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLMuYfFilr8RmhGeZEExjIb4HIZAlXd54&callback=initMap"
     async defer></script>
-    <script src="./assets/javascript/googlemap.js"></script>
+    <script src="./assets/javascript/firebase.js"></script>
     <script src="./assets/javascript/search.js"></script>
     <script src="./assets/javascript/restricted_login.js"></script>
+    <script src="./assets/javascript/googlemap.js"></script>
   </body>
 </html>
