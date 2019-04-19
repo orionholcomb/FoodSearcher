@@ -75,7 +75,7 @@ $('#runSearch').on('click', function(event) {
       var returnCalc = (nfCal / ((met * parseInt(weight)) / 2.2)) * 100;
 
       //Result statement for the requested exercise activity button
-      $('#gamePlan').text(
+      $('.gamePlan').text(
         'In order to burn the amount of calories you consumed by eating this meal, you have to  ' +
           exerciseCalc +
           ' at a relaxed pace for  ' +
@@ -84,7 +84,7 @@ $('#runSearch').on('click', function(event) {
       );
 
       //Statement that appears after the user clicks desired exercise activity
-      $('#findInstr').text("Enter your zip code, and let's workout!");
+      // $('#findInstr').text("Enter your zip code, and let's workout!");
     }
   });
 });
