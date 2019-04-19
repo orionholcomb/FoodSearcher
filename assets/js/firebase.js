@@ -7,14 +7,14 @@ var config = {
   storageBucket: "food-searcher-2148b.appspot.com",
   messagingSenderId: "269446386428"
 };
+
 firebase.initializeApp(config);
 
 // Reference for the firebase database
 var database = firebase.database();
 
 // On click function that stores our variables in firebase
-$(".exerBtn").on("click", function(event) {
-  event.preventDefault();
+$("#contactSubmit").on("click", function(event) {
 
   // Variables that store user inputs
   var name = $("#name")
