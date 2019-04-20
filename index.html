@@ -20,6 +20,12 @@
       integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .section .card-image #foodImg {
+        height: 200 pX;
+        width: 100%;
+      }
+    </style>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +44,7 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="#home">Home</a></li>
               <li><a href="#search">Search</a></li>
-              <li><a href="#search">Nutritional Value</a></li>              
+              <li><a href="#nutritionVal">Nutritional Value</a></li>              
               <li><a href="#gallery">Photo Gallery</a></li>              
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -49,7 +55,7 @@
     <ul id="mobile-nav" class="side-nav">
       <li><a href="#home">Home</a></li>
       <li><a href="#search">Search</a></li>
-      <li><a href="#search">Nutritional Value </a></li>
+      <li><a href="#nutritionVal">Nutritional Value </a></li>
       <li><a href="#gallery">Photo Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -60,8 +66,8 @@
         <li>
           <img src="assets/img/close-up-fish.jpg" alt="" />
           <div class="caption center-align">
-            <h2 class="black-text text-darken-3">Passion Through Food</h2>
-            <h5 class="black-text text-darken-3 hide-on-small-only">
+            <h2 class="white-text text-darken-3">Passion Through Food</h2>
+            <h5 class="white-text text-darken-3 hide-on-small-only">
               “One cannot think well, love well, sleep well, if one has not dined well.”        - Virginia Woolf 
             </h5>            
           </div>
@@ -77,15 +83,15 @@
           </div>
         </li>
         <li>
-          <img src="assets/img/celebrate.jpg" alt="" />
-          <div class="caption center-align">
-            <h2 class="deep-purple-text text-darken-4">Love Through Food</h2>
-            <h5 class="deep-purple-text text-darken-3 hide-on-small-only">
+          <img src="assets/img/barbecue.jpg" alt="" />
+          <div class="caption right-align">
+            <h2 class="white-text text-darken-4">Love Through Food</h2>
+            <h5 class="white-text text-darken-4 hide-on-small-only">
               “I cook with wine, sometimes I even add it to the food.”
 ― W.C. Fields 
-            </h5>           
+            </h5>            
           </div>
-        </li>
+        </li>        
       </ul>
     </section>
 
@@ -113,9 +119,21 @@
     </section>
 
     <!--SECTION: Displaying the values-->
+<section class="section section-FoodImg grey lighten-4 center">
+  <div class="container">
+      <div class="row">
+          <div class="col s12 m7 offset-m3">
+            <div class="card-panel foodImage card-image" >
+                <img   id="foodImg" src="assets\img\almonds-berries.jpg">
 
-    <section class="section section-icons grey lighten-4 center">
+            </div>
+          </div>
+        </div>
+  </div>
+</section>
+    <section  id="nutritionVal" class="section section-icons grey lighten-4 center scrollspy">
       <div class="container">
+        
         <div class="row">
           <div class="col s12 m4">
             <div class="card-panel nutritionVal">
@@ -149,13 +167,9 @@
                       <div class="input-field">
                         <input type="text" id="userWeight" onkeyup="numbersOnly(this)"/>
                         <label for="userWeight">Weight</label>
-                      </div>
-                      
-                          <!-- <button class="btn btn-larg waves-effect waves-light" id="firebaseSubmit" type="submit">Calculate</button>                           -->
+                      </div>         
                       </form>
-              
-
-            </div>
+                 </div>
 
           </div>
           <!-- SECTION Google Map and ZIP CODE-->
@@ -354,8 +368,11 @@
 
            <!-- SECTION: Footer-->
 
-    <section class="section teal darken-2 white-text center">
-      <p class="flow-text">Food Searcher&copy; 2019</p>
+    <section class="section teal darken-2 white-text  ">
+      <div class="container">
+        Food Searcher&copy; 2019
+      <a class="grey-text text-lighten-4 right" href="#!">Created by Orion Holcomb, Gabriel Tunggala, King Major and Morteza Zoughi   </a>  
+    </div> 
     </section>
 
     <!--Import jQuery before materialize.js-->
@@ -387,6 +404,7 @@
           transition: 700,
           interval: 6000
         });
+        
 
         
         //INIT SCROLLSPY
