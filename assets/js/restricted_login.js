@@ -17,6 +17,6 @@ $('#mealText').on('keyup', lettersOnly)
 g = global; which is a flag that indicates the regular expression should be tested against all possible matches in a string 
 [] contains the regular expression logic that groups 'a' through 'z' and excludes all other characters using ^ = everything except*/
 function numbersOnly(input) {
-  var regex = /[^0-9]/g; //OR could use /\D/
+  var regex = /[^0-9']/g; //OR could use /\D/
   input.value = input.value.replace(regex, "")
 };
